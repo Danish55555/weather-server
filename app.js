@@ -10,6 +10,10 @@ const weatherRouter = require("./routes/weatherRouter");
 const userRouter = require("./routes/userRouter");
 const morgan = require('morgan');
 
+
+
+
+
 // Set up MQTT client
 require("./mqtt/mqtt");
 
@@ -34,6 +38,11 @@ app.use("/user", userRouter);
 mongoose.connect(mongoURI).then(() => console.log('Connected to MongoDB!')).catch((err) => {
   console.error('Error connecting to MongoDB:', err);
 });
+
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
